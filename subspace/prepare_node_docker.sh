@@ -1,5 +1,9 @@
 #!/bin/bash
 cd $HOME
+
+sed -i 's/35G/100G/g' .bash_profile
+source ~/.bash_profile
+
 wget https://raw.githubusercontent.com/ivanovsergey93/nodes/main/subspace/remove_old_node_nodes_guru.sh
 chmod +x remove_old_node_nodes_guru.sh
 ./remove_old_node_nodes_guru.sh
@@ -11,6 +15,7 @@ mkdir node-data
 chmod a+rw -R farmer-data
 chmod a+rw -R node-data
 wget https://raw.githubusercontent.com/ivanovsergey93/nodes/main/subspace/docker-compose.yml
+
 touch .env
 printf 'SUBSPACE_NODENAME="%s"\n' "$SUBSPACE_NODENAME" > .env
 printf 'SUBSPACE_WALLET="%s"\n' "$SUBSPACE_WALLET" >> .env
@@ -23,3 +28,7 @@ chmod +x install_docker.sh
 
 cd subspace
 docker-compose up -d
+
+sleep 30
+docker-compose logs -t --tail 15 node
+docker-compose logs -t --tail 15 farmer
