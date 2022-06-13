@@ -8,3 +8,4 @@ cd py
 source .venv/bin/activate
 PIP_REQUIRE_VIRTUALENV=true pip install -r requirements-dev.txt
 systemctl restart starknetd
+pathfinder -V
