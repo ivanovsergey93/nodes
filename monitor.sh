@@ -2,14 +2,14 @@
 cd $HOME
 if [ ! $MONITOR_OWNER ]; then
     read -p "Введите свой ник, например телеграмм(без @): " MONITOR_OWNER
-    echo 'export OWNER='$MONITOR_OWNER >> $HOME/.profile
+    echo 'export MONITOR_OWNER='$MONITOR_OWNER >> $HOME/.profile
     . ~/.profile
 fi
 echo 'Владелец: ' $MONITOR_OWNER
 sleep 1
 if [ ! $MONITOR_HOSTNAME ]; then
     read -p "Введите название своего сервера: " MONITOR_HOSTNAME
-    echo 'export HOSTNAME='$MONITOR_HOSTNAME >> $HOME/.profile
+    echo 'export MONITOR_HOSTNAME='$MONITOR_HOSTNAME >> $HOME/.profile
     . ~/.profile
 fi
 echo 'Название вашего сервера: ' $MONITOR_HOSTNAME
