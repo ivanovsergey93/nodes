@@ -1,12 +1,9 @@
 systemctl stop suid
 #!/bin/bash
-rm -rf /var/sui/db/* /var/sui/genesis.blob $HOME/sui
+rm -rf /var/sui/db/* /var/sui/genesis.blob
 source $HOME/.cargo/env
-git clone https://github.com/MystenLabs/sui.git
 cd $HOME/sui
-git remote add upstream https://github.com/MystenLabs/sui
-git fetch upstream
-git checkout -B devnet --track upstream/devnet
+git pull
 cargo build --release -p sui-node
 mv ~/sui/target/release/sui-node /usr/local/bin/
 wget -O /var/sui/genesis.blob https://github.com/MystenLabs/sui-genesis/raw/main/devnet/genesis.blob
