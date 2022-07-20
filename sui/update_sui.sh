@@ -1,5 +1,5 @@
-systemctl stop suid
 #!/bin/bash
+systemctl stop suid
 rm -rf /var/sui/db/* /var/sui/genesis.blob
 source $HOME/.cargo/env
 cd $HOME/sui
