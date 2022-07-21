@@ -17,6 +17,14 @@ sleep 1
 
 
 sudo systemctl stop prometheus && systemctl disable prometheus
+sudo systemctl stop vmagent && systemctl disable vmagent
+sudo systemctl stop node_exporter && systemctl disable node_exporter
+
+sudo rm /etc/prometheus/prometheus.yml
+sudo rm /etc/systemd/system/vmagent.service
+sudo rm /etc/systemd/system/node_exporter.service
+rm -rf ~/vmutils
+rm /usr/local/bin/node_exporter
 
 sudo mkdir /etc/prometheus
 
