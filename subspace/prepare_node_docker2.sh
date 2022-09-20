@@ -17,7 +17,3 @@ chmod a+rw -R node-data
 wget -O docker-compose.yml https://raw.githubusercontent.com/ivanovsergey93/nodes/main/subspace/docker-compose.yml
 
 docker-compose up -d
-
-sleep 30
-docker-compose logs -t --tail 15 node
-docker-compose logs -t --tail 15 farmer
