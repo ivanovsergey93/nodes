@@ -3,10 +3,6 @@ cd $HOME
 
 source ~/.bash_profile
 
-systemctl stop starknetd
-rm -rf ~/pathfinder/py/goerli.sqlite
-rm -rf ~/pathfinder/py/goerli.sqlite-wal
-rm -rf ~/pathfinder/py/goerli.sqlite-shm
 
 mkdir subspace
 cd subspace
