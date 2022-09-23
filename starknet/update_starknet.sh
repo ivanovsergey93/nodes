@@ -1,7 +1,7 @@
 #!/bin/bash
 cd ~/pathfinder
 git fetch
-git checkout v0.3.1
+git checkout v0.3.5
 cd py
 python3 -m venv .venv
 source .venv/bin/activate
