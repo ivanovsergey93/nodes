@@ -28,4 +28,4 @@ curl --location --request POST 'http://localhost:8020' \
 
 curl --location --request POST 'http://localhost:8020' \
 --header 'Content-Type: application/json' \
---data-raw '{"method":"subgraph_deploy","jsonrpc":"2.0","params":{"name":"1Giveth-Economy-Gnosis","ipfs_hash":"QmeVXKzGKSyfEQib4MzeZveJgDYJCYDMMHc1pPevWeSbsq"},"id":""}' 
+--data-raw '{"method":"subgraph_deploy","jsonrpc":"2.0","params":{"name":"Giveth-Economy-Gnosis","ipfs_hash":"QmeVXKzGKSyfEQib4MzeZveJgDYJCYDMMHc1pPevWeSbsq"},"id":""}' 
