@@ -168,7 +168,7 @@ services:
       - subgraph_endpoint=${SUBGRAPH_ENDPOINT:-https://gateway.thegraph.com/network}
     restart: unless-stopped
     ports:
-      - 3000
+      - 3000:3000
     networks:
       - network
     labels:
