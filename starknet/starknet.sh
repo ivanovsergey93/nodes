@@ -9,6 +9,7 @@ sudo systemctl stop starknetd &>/dev/null
 sudo systemctl disable starknetd &>/dev/null
 rm -rf $HOME/pathfinder/py/.venv &>/dev/null
 source $HOME/.bash_profile
+echo "PATHFINDER_ETHEREUM_API_URL=$ALCHEMY" > pathfinder-var.env
 docker-compose pull
 mkdir -p $HOME/pathfinder/pathfinder
 chown -R 1000.1000 .
